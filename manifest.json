@@ -1,0 +1,20 @@
+{
+	"name": "reangst",
+	"version": "1.0",
+	"description": "Forbid flak.tedunangst.com from running javascript to avoid needless loaders.",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": [
+				"*://flak.tedunangst.com/*"
+			],
+			"js": [
+				"reangst.js"
+			],
+			"run_at": "document_start"
+		}
+	],
+	"permissions": [
+		"*://flak.tedunangst.com/*"
+	]
+}
